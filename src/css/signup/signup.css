@@ -1,0 +1,77 @@
+input[type="text"] {
+  display: inline-block;
+  width: 300px;
+  height: 44px;
+  padding: 16px 4px 16px 12px;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 14px;
+  font-family: "SF Pro";
+
+  border: 0.5px solid #e5e5ea;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.ant-input-affix-wrapper {
+  width: 300px;
+}
+
+.ant-btn-primary {
+  background-color: #1c1c1e;
+  font-family: "SF Pro";
+  font-weight: 600;
+}
+.ant-btn-primary:disabled {
+  background-color: #8e8e93;
+  color: #fff;
+}
+
+.display {
+  height: 100vh;
+  width: 100vw;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title-text {
+  font-family: "SF Pro";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.sub-title-text {
+  font-family: "SF Pro";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: normal;
+  margin-bottom: 24px;
+  color: #8e8e93;
+}
+
+.input-box-spacing {
+  margin-top: 24px;
+}
+
+.phone-prefix-icon {
+  margin-right: 12px;
+}
+
+.next-btn {
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 300px;
+  height: 48px;
+  font-size: 16px;
+  font-family: "SF Pro";
+  margin-top: 24px;
+}

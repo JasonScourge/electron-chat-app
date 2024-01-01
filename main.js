@@ -12,11 +12,6 @@ let mainWindow = null;
 // Keep a reference for dev mode
 let dev = false;
 
-// Broken:
-// if (process.defaultApp || /[\\/]electron-prebuilt[\\/]/.test(process.execPath) || /[\\/]electron[\\/]/.test(process.execPath)) {
-//   dev = true
-// }
-
 if (
   process.env.NODE_ENV !== undefined &&
   process.env.NODE_ENV === "development"
@@ -25,7 +20,7 @@ if (
 }
 
 // Temporary fix broken high-dpi scale factor on Windows (125% scaling)
-// info: https://github.com/electron/electron/issues/9691
+// More info: https://github.com/electron/electron/issues/9691
 if (process.platform === "win32") {
   app.commandLine.appendSwitch("high-dpi-support", "true");
   app.commandLine.appendSwitch("force-device-scale-factor", "1");
@@ -41,9 +36,10 @@ function createMainWindow() {
       nodeIntegration: true,
       contextIsolation: false,
     },
+    icon: `${__dirname}/src/assets/icons/logo.png`,
   });
 
-  // and load the index.html of the app.
+  // Loading the index.html of the app.
   let indexPath;
 
   if (dev && process.argv.indexOf("--noDevServer") === -1) {
@@ -63,7 +59,7 @@ function createMainWindow() {
 
   mainWindow.loadURL(indexPath);
 
-  // Don't show until we are ready and loaded
+  // Do not show until we are ready and loaded
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
 
@@ -77,6 +73,8 @@ function createMainWindow() {
       installExtension(REACT_DEVELOPER_TOOLS).catch((err) =>
         console.log("Error loading React DevTools: ", err)
       );
+
+      // TODO: Comment this out and change the comments accordingly once done
       mainWindow.webContents.openDevTools();
     }
   });

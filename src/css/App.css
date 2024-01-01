@@ -1,0 +1,13 @@
+/* Main CSS file */
+@import "typography/fonts.css";
+@import "signup/signup.css";
+
+:root {
+  background-color: #fff;
+  font-family: "SF Pro";
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}

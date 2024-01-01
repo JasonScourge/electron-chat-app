@@ -1,18 +1,28 @@
 import React from "react";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 
-import "../assets/css/App.css";
+import "../css/App.css";
+import SignUpPhone from "../pages/SignUpPhone";
+import SignUpCode from "../pages/SignUpCode";
+import SignUpName from "../pages/SignUpName";
+
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <SignUpPhone />,
+  },
+  {
+    path: "/signUpCode",
+    element: <SignUpCode />,
+  },
+  {
+    path: "/signUpName",
+    element: <SignUpName />,
+  },
+]);
 
 function App() {
-  return (
-    <div>
-      <h1>Hello, Electron!</h1>
-
-      <p>
-        I hope you enjoy using basic-electron-react-boilerplate to start your
-        dev off right!
-      </p>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
