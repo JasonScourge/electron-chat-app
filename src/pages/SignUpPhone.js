@@ -19,6 +19,7 @@ function SignUpPhone() {
           <div className="title-text">What's your Phone Number?</div>
         </Col>
         <Col span={24}>
+          {/* NOTE: Input any number will do as there is no actual SMS service */}
           <Input
             placeholder="Phone Number"
             onChange={(event) => {

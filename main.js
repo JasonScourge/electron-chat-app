@@ -29,14 +29,14 @@ if (process.platform === "win32") {
 function createMainWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 1024,
-    height: 768,
+    width: 1440,
+    height: 784,
     show: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
     },
-    icon: `${__dirname}/src/assets/icons/logo.png`,
+    icon: `${__dirname}/src/assets/icons/logo.icns`,
   });
 
   // Loading the index.html of the app.

@@ -1,0 +1,38 @@
+.chat-sidebar {
+  background-color: #e8e6e3;
+  width: 30%;
+  height: 100vh;
+}
+
+.chat-window {
+  background-color: #fff;
+  width: 70%;
+  height: 100vh;
+}
+
+.new-chat-icon {
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.message-bar {
+  margin: 16px;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+
+input[type="text"].message-text-field {
+  height: 26px;
+  width: 100%;
+  background-color: #ebedef;
+  border-radius: 100px;
+  border: 1px solid #ebedef;
+}
+
+.message-send-icon {
+  cursor: pointer;
+  margin-left: 16px;
+}

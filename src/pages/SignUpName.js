@@ -49,11 +49,11 @@ function SignUpName() {
         <Col span={24}>
           <div>
             <Button
-              disabled={!firstName && !lastName}
+              disabled={!firstName || !lastName}
               className="next-btn"
               type="primary"
               onClick={() => {
-                navigate("/signUpName");
+                navigate("/chat");
               }}
             >
               Next
