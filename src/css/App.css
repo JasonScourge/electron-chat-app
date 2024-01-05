@@ -1,7 +1,8 @@
 /* Main CSS file */
 @import "typography/fonts.css";
 @import "signup/signup.css";
-@import "chat/chat.css";
+@import "chat/sidebar.css";
+@import "chat/chatbox.css";
 
 :root {
   background-color: #fff;

@@ -1,0 +1,102 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+.message-bar {
+  margin: 16px;
+  width: 97%;
+  bottom: 0;
+  position: absolute;
+}
+
+input[type="text"].message-text-field {
+  height: 34px;
+  width: 100%;
+  background-color: #ebedef;
+  border-radius: 100px;
+  border: 1px solid #ebedef;
+}
+
+/* img of the send icon */
+.message-send-icon {
+  cursor: pointer;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+/* chat component */
+.messages-wrapper {
+  padding: 8px;
+  margin-bottom: 60px;
+}
+.chat-bubble {
+  border-radius: 20px 20px 20px 0;
+  padding: 15px;
+  background-color: #e5e5ea;
+  width: max-content;
+  max-width: calc(100% - 50px);
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.chat-bubble.right {
+  margin-left: auto;
+  border-radius: 20px 20px 0 20px;
+  background-color: #fff;
+}
+.chat-bubble__left {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.user-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #1c2c4c;
+}
+.user-message {
+  word-break: break-all;
+}
+.time-stamp {
+  font-size: 0.5rem;
+  margin-top: 4px;
+  float: right;
+}
+
+/* send message */
+.send-message {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+}
+.send-message > input {
+  height: 34px;
+  border-radius: 100px;
+  border: none;
+  flex-grow: 1;
+  background-color: #ebedef;
+  font-size: 14px;
+  font-family: "SF Pro";
+}
+.send-message > input:placeholder {
+  color: #ddd;
+}
+.send-message > :is(input, button):focus {
+  outline: none;
+}
+.send-message-button {
+  margin-left: 18px;
+}

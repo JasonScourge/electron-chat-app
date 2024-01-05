@@ -20,6 +20,7 @@ function SignUpName() {
         </Col>
         <Col span={24}>
           <Input
+            className="signup-input"
             placeholder="Name"
             onChange={(event) => {
               const reg = new RegExp("^[a-zA-Z ]*$");
@@ -35,6 +36,7 @@ function SignUpName() {
         <Col className="input-box-spacing" span={24}>
           <Input
             placeholder="Last Name"
+            className="signup-input"
             onChange={(event) => {
               const reg = new RegExp("^[a-zA-Z ]*$");
               const value = event.target.value;

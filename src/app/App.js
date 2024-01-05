@@ -5,7 +5,7 @@ import "../css/App.css";
 import SignUpPhone from "../pages/SignUpPhone";
 import SignUpCode from "../pages/SignUpCode";
 import SignUpName from "../pages/SignUpName";
-import Chat from "../pages/Chat";
+import ChatApp from "../pages/ChatApp";
 
 const router = createHashRouter([
   {
@@ -22,7 +22,7 @@ const router = createHashRouter([
   },
   {
     path: "/chat",
-    element: <Chat />,
+    element: <ChatApp />,
   },
 ]);
 

@@ -26,6 +26,7 @@ function SignUpCode() {
         </Col>
         <Col span={24}>
           <Input
+            className="signup-input"
             placeholder="Code"
             onChange={(event) => {
               const reg = new RegExp("^[0-9]+$");

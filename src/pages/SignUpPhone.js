@@ -21,6 +21,7 @@ function SignUpPhone() {
         <Col span={24}>
           {/* NOTE: Input any number will do as there is no actual SMS service */}
           <Input
+            className="signup-input"
             placeholder="Phone Number"
             onChange={(event) => {
               const reg = new RegExp("^[0-9]+$");

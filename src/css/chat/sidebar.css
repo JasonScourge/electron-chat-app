@@ -1,0 +1,18 @@
+.chat-sidebar {
+  background-color: #e8e6e3;
+  width: 30%;
+  height: 100vh;
+}
+
+.chat-window {
+  background-color: #fff;
+  width: 70%;
+  height: 100vh;
+}
+
+.new-chat-icon {
+  cursor: pointer;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
