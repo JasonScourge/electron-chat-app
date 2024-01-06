@@ -1,6 +1,6 @@
 ## Electron React Chat App
 
-This application is largely bootstrapped from [Alexdevero's](https://github.com/alexdevero/electron-react-webpack-boilerplate) and [Timonwa's](https://github.com/Timonwa/react-chat) repos.
+This application is largely bootstrapped from [Alexdevero's](https://github.com/alexdevero/electron-react-webpack-boilerplate) repo and [Timonwa's]([https://github.com/Timonwa/react-chat](https://www.freecodecamp.org/news/building-a-real-time-chat-app-with-reactjs-and-firebase/) guide.
 
 
 #### Install dependencies
