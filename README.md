@@ -27,7 +27,7 @@ yarn start
 
 #### Adding your own Firebase Configurations
 
-You will need generate your own firebase config keys and override them in the `src/firebase.js` folder.
+You will need generate your own firebase config keys. You can then choose to use your own keys either by adding them to a `.env` file or update the values in the `src/firebase.js` folder.
 
 
 #### Build the app (automatic)
