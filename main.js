@@ -71,10 +71,9 @@ function createMainWindow() {
       } = require("electron-devtools-installer");
 
       installExtension(REACT_DEVELOPER_TOOLS).catch((err) =>
-        console.log("Error loading React DevTools: ", err)
+        console.error("Error loading React DevTools: ", err)
       );
 
-      // TODO: Comment this out and change the comments accordingly once done
       mainWindow.webContents.openDevTools();
     }
   });

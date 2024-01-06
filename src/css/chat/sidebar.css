@@ -16,3 +16,57 @@
   right: 0;
   position: absolute;
 }
+
+.display-picture-avatar {
+  padding: 0.5rem;
+}
+
+.sidebar-chat-preview {
+  background-color: #0071ee;
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidebar-chat-message {
+  display: inline-block;
+  width: 100%;
+  margin-left: 0.5rem;
+}
+
+.sidebar-chat-top {
+  margin-top: 1rem;
+}
+
+.chat-name {
+  font-family: "SF Pro";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #fff;
+}
+
+.chat-timestamp {
+  text-align: right;
+  font-family: "SF Pro";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fff;
+  margin-top: -0.15rem;
+  padding-right: 1rem;
+}
+
+.chat-message-details {
+  font-family: "SF Pro";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #fff;
+  max-width: 200px;
+  min-width: 160px;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}

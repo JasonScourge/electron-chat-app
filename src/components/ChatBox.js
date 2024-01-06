@@ -10,7 +10,7 @@ import { db } from "../../src/firebase";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
 
-const ChatBox = () => {
+const ChatBox = ({ user }) => {
   const [messages, setMessages] = useState([]);
   const scroll = useRef();
 
@@ -37,13 +37,14 @@ const ChatBox = () => {
   return (
     <main className="chat-box">
       <div className="messages-wrapper">
+        {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
+        <span ref={scroll}></span>
         {messages?.map((message) => (
-          <Message key={message.id} message={message} />
+          <Message key={message.id} message={message} user={user} />
         ))}
       </div>
-      {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
-      <span ref={scroll}></span>
-      <SendMessage scroll={scroll} />
+
+      <SendMessage scroll={scroll} user={user} />
     </main>
   );
 };

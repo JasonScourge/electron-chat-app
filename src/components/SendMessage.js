@@ -5,30 +5,24 @@ import dayjs from "dayjs";
 import sendBtn from "../assets/images/send-btn.png";
 import { Form, Input, Button } from "antd";
 
-const SendMessage = ({ scroll }) => {
+const SendMessage = ({ scroll, user }) => {
   const [message, setMessage] = useState("");
 
+  const { uid, displayName } = user;
   const sendMessage = async () => {
-    if (message.trim() === "") {
-      alert("Enter valid message");
-      return;
+    if (message.trim() !== "") {
+      await addDoc(collection(db, "messages"), {
+        text: message,
+        name: displayName,
+        serverTimestamp: serverTimestamp(),
+        createdAt: dayjs().toString(),
+        timeStamp: dayjs().format("h:mm A"),
+        uid: uid,
+      });
+      setMessage("");
+      scroll.current.scrollIntoView({ behavior: "smooth" });
     }
-
-    const { uid, displayName, photoURL } = auth.currentUser;
-    await addDoc(collection(db, "messages"), {
-      text: message,
-      name: displayName,
-      avatar: photoURL,
-      serverTimestamp: serverTimestamp(),
-      createdAt: dayjs().toString(),
-      timeStamp: dayjs().format("h:mm A"),
-      uid,
-    });
-    setMessage("");
-    scroll.current.scrollIntoView({ behavior: "smooth" });
   };
-
-  <img className="message-send-icon" src={sendBtn} alt="send-icon" />;
 
   return (
     <Form onFinish={() => sendMessage()} className="send-message">
@@ -41,9 +35,9 @@ const SendMessage = ({ scroll }) => {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
-
       <div className="send-message-button">
         <Button
+          onClick={() => sendMessage()}
           type="submit"
           icon={
             <div className="message-send-icon">
@@ -52,8 +46,6 @@ const SendMessage = ({ scroll }) => {
           }
         />
       </div>
-
-      {/* <button type="submit">Send</button> */}
     </Form>
   );
 

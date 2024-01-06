@@ -35,8 +35,15 @@ input[type="text"].message-text-field {
 
 /* chat component */
 .messages-wrapper {
-  padding: 8px;
-  margin-bottom: 60px;
+  padding: 8px 8px 60px 8px;
+
+  height: 100%;
+  overflow: scroll;
+  box-sizing: border-box;
+  /* padding-top: 50px; */
+  width: 100%;
+  position: absolute;
+  top: 0;
 }
 .chat-bubble {
   border-radius: 20px 20px 20px 0;
@@ -51,7 +58,8 @@ input[type="text"].message-text-field {
 .chat-bubble.right {
   margin-left: auto;
   border-radius: 20px 20px 0 20px;
-  background-color: #fff;
+  color: #fff;
+  background-color: #0071ee;
 }
 .chat-bubble__left {
   width: 35px;
@@ -66,7 +74,7 @@ input[type="text"].message-text-field {
   color: #1c2c4c;
 }
 .user-message {
-  word-break: break-all;
+  word-break: break-word;
 }
 .time-stamp {
   font-size: 0.5rem;
@@ -81,6 +89,7 @@ input[type="text"].message-text-field {
   width: 100%;
   padding: 20px 30px;
   display: flex;
+  background-color: #fff;
 }
 .send-message > input {
   height: 34px;

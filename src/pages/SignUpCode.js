@@ -19,7 +19,7 @@ function SignUpCode() {
           <div className="title-text">+1 310-481-4739</div>
         </Col>
         <Col span={24}>
-          {/* NOTE: There is no actual SMS service so input any number will do */}
+          {/* NOTE: There is no actual SMS service so entering any number will do */}
           <div className="sub-title-text">
             We have sent you an SMS with the code
           </div>

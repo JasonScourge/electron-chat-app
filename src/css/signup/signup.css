@@ -76,3 +76,16 @@ input[type="text"].signup-input {
   font-family: "SF Pro";
   margin-top: 24px;
 }
+
+.header-title-bold {
+  font-size: 16px;
+  font-family: "SF Pro";
+  font-weight: 700;
+}
+
+.footer-title-bold {
+  margin-top: 24px;
+  font-size: 16px;
+  font-family: "SF Pro";
+  font-weight: 400;
+}
