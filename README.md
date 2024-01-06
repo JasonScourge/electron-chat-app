@@ -1,7 +1,7 @@
-## Minimal Electron, React and Webpack boilerplate
+## Electron React Chat App
 
-Minimal Electron, React, PostCSS and Webpack boilerplate to help you get started with building your next app.
-This application is largely bootstrapped from [Alex Devero's](https://github.com/alexdevero/electron-react-webpack-boilerplate) repo.
+This application is largely bootstrapped from [Alexdevero's](https://github.com/alexdevero/electron-react-webpack-boilerplate) and [Timonwa's](https://github.com/Timonwa/react-chat) repos.
+
 
 #### Install dependencies
 
@@ -24,6 +24,11 @@ or
 ```
 yarn start
 ```
+
+#### Adding your own Firebase Configurations
+
+You will need generate your own firebase config keys and override them in the `src/firebase.js` folder.
+
 
 #### Build the app (automatic)
 
